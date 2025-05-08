@@ -28,7 +28,7 @@ bool panel_off[PANEL_SIZE]{
 //--------------------------------
 
 bool letter_A[PANEL_SIZE]{
-  1, 1, 1, 1,  //1
+  0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
   1, 1, 1, 1,  //4
@@ -50,14 +50,14 @@ bool letter_B[PANEL_SIZE]{
 };
 
 bool letter_C[PANEL_SIZE]{
-  1, 1, 1, 1,  //1
+  0, 1, 1, 1,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
   1, 0, 0, 0,  //4
   1, 0, 0, 0,  //5
   1, 0, 0, 0,  //6
   1, 0, 0, 0,  //7
-  1, 1, 1, 1,  //8
+  0, 1, 1, 1,  //8
 };
 
 bool letter_D[PANEL_SIZE]{
@@ -171,8 +171,8 @@ bool letter_M[PANEL_SIZE]{
 };
 
 bool letter_N[PANEL_SIZE]{
-  0, 0, 0, 1,  //1
-  1, 0, 0, 1,  //2
+  1, 0, 0, 1,  //1
+  1, 1, 0, 1,  //2
   1, 1, 0, 1,  //3
   1, 1, 0, 1,  //4
   1, 0, 1, 1,  //5
@@ -219,7 +219,7 @@ bool letter_R[PANEL_SIZE]{
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
   1, 1, 1, 0,  //4
-  1, 0, 0, 1,  //5
+  1, 0, 1, 0,  //5
   1, 0, 0, 1,  //6
   1, 0, 0, 1,  //7
   1, 0, 0, 1,  //8
@@ -437,14 +437,14 @@ bool letter_k[PANEL_SIZE]{
 };
 
 bool letter_l[PANEL_SIZE]{
-  1, 1, 0, 0,  //1
+  0, 1, 0, 0,  //1
   0, 1, 0, 0,  //2
   0, 1, 0, 0,  //3
   0, 1, 0, 0,  //4
   0, 1, 0, 0,  //5
   0, 1, 0, 0,  //6
-  0, 1, 0, 0,  //7
-  1, 1, 1, 0,  //8
+  0, 1, 0, 1,  //7
+  0, 0, 1, 0,  //8
 };
 
 bool letter_m[PANEL_SIZE]{
@@ -474,9 +474,9 @@ bool letter_o[PANEL_SIZE]{
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
   0, 1, 1, 0,  //4
-  1, 0, 1, 1,  //5
+  1, 0, 0, 1,  //5
   1, 0, 0, 1,  //6
-  1, 1, 0, 1,  //7
+  1, 0, 0, 1,  //7
   0, 1, 1, 0,  //8
 };
 
@@ -625,6 +625,17 @@ bool number_1[PANEL_SIZE]{
   0, 1, 1, 1,  //8
 };
 
+bool number_2[PANEL_SIZE]{
+  0, 1, 1, 0,  //1
+  1, 0, 0, 1,  //2
+  1, 0, 0, 1,  //3
+  0, 0, 1, 0,  //4
+  0, 1, 0, 0,  //5
+  1, 0, 0, 0,  //6
+  1, 0, 0, 0,  //7
+  1, 1, 1, 1,  //8
+};
+
 bool number_3[PANEL_SIZE]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
@@ -659,8 +670,8 @@ bool number_5[PANEL_SIZE]{
 };
 
 bool number_6[PANEL_SIZE]{
-  0, 1, 1, 1,  //1
-  1, 0, 0, 0,  //2
+  0, 1, 1, 0,  //1
+  1, 0, 0, 1,  //2
   1, 0, 0, 0,  //3
   1, 0, 0, 0,  //4
   1, 1, 1, 0,  //5
@@ -685,9 +696,9 @@ bool number_8[PANEL_SIZE]{
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
   0, 1, 1, 0,  //4
-  1, 1, 0, 1,  //5
+  1, 0, 0, 1,  //5
   1, 0, 0, 1,  //6
-  1, 0, 1, 1,  //7
+  1, 0, 0, 1,  //7
   0, 1, 1, 0,  //8
 };
 
@@ -698,17 +709,107 @@ bool number_9[PANEL_SIZE]{
   0, 1, 1, 1,  //4
   0, 0, 0, 1,  //5
   0, 0, 0, 1,  //6
-  0, 0, 0, 1,  //7
-  1, 1, 1, 0,  //8
+  1, 0, 0, 1,  //7
+  0, 1, 1, 0,  //8
 };
 
 
 bool *panel_ascii[] = {
-  panel_on, panel_off,                                                   //extra
-  letter_A, letter_B, letter_C, letter_D, letter_E, letter_F, letter_G,  //Big Letters
-  letter_H, letter_I, letter_J, letter_K, letter_L, letter_M, letter_N,  //Big Letters
-  letter_O, letter_P, letter_Q, letter_R, letter_S, letter_T, letter_U,  //Big Letters
-  letter_V, letter_W, letter_X, letter_Y, letter_Z,                      //Big Letters
-  letter_a,                                                              //small letters
-  number_0,                                                              //numbers
+  panel_off,                                                              // off - 0
+  panel_on,                                                               // on - 1
+  panel_off,                                                              // - 2
+  panel_off,                                                              // - 3
+  panel_off,                                                              // - 4
+  panel_off,                                                              // - 5
+  panel_off,                                                              // - 6
+  panel_off,                                                              // - 7
+  panel_off,                                                              // - 8
+  panel_off,                                                              // - 9
+  panel_off,                                                              // - 10
+  panel_off,                                                              // - 11
+  panel_off,                                                              // - 12
+  panel_off,                                                              // - 13
+  panel_off,                                                              // - 14
+  panel_off,                                                              // - 15
+  panel_off,                                                              // - 16
+  panel_off,                                                              // - 17
+  panel_off,                                                              // - 18
+  panel_off,                                                              // - 19
+  panel_off,                                                              // - 20
+  panel_off,                                                              // - 21
+  panel_off,                                                              // - 22
+  panel_off,                                                              // - 23
+  panel_off,                                                              // - 24
+  panel_off,                                                              // - 25
+  panel_off,                                                              // - 26
+  panel_off,                                                              // - 27
+  panel_off,                                                              // - 28
+  panel_off,                                                              // - 29
+  panel_off,                                                              // - 30
+  panel_off,                                                              // - 31
+  panel_off,                                                              // Space - 32
+  panel_off,                                                              // ! - 33
+  panel_off,                                                              // " - 34
+  panel_off,                                                              // # - 35
+  panel_off,                                                              // $ - 36
+  panel_off,                                                              // % - 37
+  panel_off,                                                              // & - 38
+  panel_off,                                                              // ' - 39
+  panel_off,                                                              // ( - 40
+  panel_off,                                                              // ) - 41
+  panel_off,                                                              // * - 42
+  panel_off,                                                              // + - 43
+  panel_off,                                                              // , - 44
+  panel_off,                                                              // - - 45
+  panel_off,                                                              // . - 46
+  panel_off,                                                              // / - 47
+  number_0,                                                               // 0 - 48
+  number_1,                                                               // 1 - 49
+  number_2,                                                               // 2 - 50
+  number_3,                                                               // 3 - 51
+  number_4,                                                               // 4 - 52
+  number_5,                                                               // 5 - 53
+  number_6,                                                               // 6 - 54
+  number_7,                                                               // 7 - 55
+  number_8,                                                               // 8 - 56
+  number_9,                                                               // 9 - 57
+  panel_off,                                                              // : - 58
+  panel_off,                                                              // ; - 59
+  panel_off,                                                              // < - 60
+  panel_off,                                                              // = - 61
+  panel_off,                                                              // > - 62
+  panel_off,                                                              // ? - 63
+  panel_off,                                                              // @ - 64
+  letter_A,                                                               // A - 65
+  letter_B,                                                               // B - 66
+  letter_C,                                                               // C - 67
+  letter_D,                                                               // D - 68
+  letter_E,                                                               // E - 69
+  letter_F,                                                               // F - 70
+  letter_G,                                                               // G - 71
+  letter_H,                                                               // H - 72
+  letter_I,                                                               // I - 73
+  letter_J,                                                               // J - 74
+  letter_K,                                                               // K - 75
+  letter_L,                                                               // L - 76
+  letter_M,                                                               // M - 77
+  letter_N,                                                               // N - 78
+  letter_O,                                                               // O - 79
+  letter_P,                                                               // P - 80
+  letter_Q,                                                               // Q - 81
+  letter_R,                                                               // R - 82
+  letter_S,                                                               // S - 83
+  letter_T,                                                               // T - 84
+  letter_U,                                                               // U - 85
+  letter_V,                                                               // V - 86
+  letter_W,                                                               // W - 87
+  letter_X,                                                               // X - 88
+  letter_Y,                                                               // Y - 89
+  letter_Z,                                                               // Z - 90
+  letter_a, letter_b, letter_c, letter_d, letter_e, letter_f, letter_g,   //small letters
+  letter_h, letter_i, letter_j, letter_k, letter_l, letter_m, letter_n,   //small letters
+  letter_o, letter_p, letter_q, letter_r, letter_s, letter_t_, letter_u,  //small letters
+  letter_v, letter_w, letter_x, letter_y, letter_z,                       //small letters
+  number_0, number_1, number_2, number_3, number_4,                       //numbers
+  number_5, number_6, number_7, number_8, number_9                        //numbers
 };

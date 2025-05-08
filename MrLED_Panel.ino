@@ -22,8 +22,6 @@ bool panel_one_s[PANEL_SIZE] = {
 #include "config.h"
 #include "font.h"
 
-
-
 // Define the array of leds
 CRGB leds[NUM_LEDS];
 
@@ -119,25 +117,33 @@ void rainbow_hi() {
       switch (panel) {
         case 0:
           if (panel_one[i]) {
-            leds[panel_translator[i] * PANEL_SIZE].setRGB(r, g, b);
+            leds[panel_translator[i] + panel * PANEL_SIZE].setRGB(r, g, b);
+          }else{
+            leds[panel_translator[i] + panel * PANEL_SIZE] = CRGB::Black;
           }
           break;
 
         case 1:
           if (panel_two[i]) {
             leds[panel_translator[i] + panel * PANEL_SIZE].setRGB(r, g, b);
+          }else{
+            leds[panel_translator[i] + panel * PANEL_SIZE] = CRGB::Black;
           }
           break;
 
         case 2:
           if (panel_one[i]) {
             leds[panel_translator[i] + panel * PANEL_SIZE].setRGB(r, g, b);
+          }else{
+            leds[panel_translator[i] + panel * PANEL_SIZE] = CRGB::Black;
           }
           break;
 
         case 3:
           if (panel_two[i]) {
             leds[panel_translator[i] + panel * PANEL_SIZE].setRGB(r, g, b);
+          }else{
+            leds[panel_translator[i] + panel * PANEL_SIZE] = CRGB::Black;
           }
           break;
       }
@@ -200,24 +206,69 @@ void wave() {
   }
 }
 
+void led_ascii_shuffle(){
+  for (int i = 0; i < 64; i++) {
+    for (int pixel = 0; pixel < 32; pixel++) {
+      if (panel_ascii[i][pixel]) {
+        leds[panel_translator[pixel]] = CRGB::Red;
+      }else{
+        leds[panel_translator[pixel]] = CRGB::Black;
+      }
+    }
+    FastLED.show();
+    delay(500);
+
+  }
+}
+
+void show_ascii(int panel, char ascii, CRGB::HTMLColorCode color){
+  if(color == CRGB::FairyLightNCC){
+          int r = rand() % 255;
+      int g = rand() % 255;
+      int b = rand() % 255;
+    for(int pixel = 0; pixel < PANEL_SIZE; pixel++){
+        if(panel_ascii[ascii][pixel]){
+          leds[panel_translator[pixel] + panel * PANEL_SIZE].setRGB(r, g, b);
+        }else{
+            leds[panel_translator[pixel] + panel * PANEL_SIZE] = CRGB::Black;
+          }
+    }
+  }else{
+
+    for(int pixel = 0; pixel < PANEL_SIZE; pixel++){
+        if(panel_ascii[ascii][pixel]){
+          leds[panel_translator[pixel] + panel * PANEL_SIZE] = color;
+        }else{
+            leds[panel_translator[pixel] + panel * PANEL_SIZE] = CRGB::Black;
+          }
+    }
+    }
+    
+      FastLED.show();
+}
+
 void setup() {
   FastLED.addLeds<SK6812, DATA_PIN, GRB>(leds, NUM_LEDS);
+  FastLED.setBrightness(25);
+  FastLED.setCorrection(TypicalLEDStrip);
 
+  Serial.begin(115200);
   srand(time(NULL));
 }
 
 void loop() {
-  //rainbow_hi();
+  Serial.print("hi\n");  
+  rainbow_hi();
+  delay(2000);
   //sam();
-  for (int i = 0; i < 30; i++) {
-    for (int pixel = 0; pixel < 32; pixel++) {
-      if (panel_ascii[i][pixel]) {
-        leds[panel_translator[pixel]] = CRGB::Red;
-      }
-    }
-    FastLED.show();
-    delay(100);
+  wave();
+  delay(2000);
+  //led_ascii_shuffle();
+  delay(2000);
 
-    FastLED.showColor(CRGB::Black, 255);
+  for(int panel = 0; panel < PANELS_AMOUNT; panel++){
+          show_ascii(panel, 'F', CRGB::FairyLightNCC);
   }
+  show_ascii(2, '2', CRGB::BlueViolet);
+      delay(2000);
 }
