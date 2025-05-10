@@ -114,7 +114,7 @@ bool special_bracket_open[PANEL_SIZE]{
   0, 0, 1, 0,  //8
 };
 
-bool [PANEL_SIZE]{
+bool continue_here[PANEL_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -849,14 +849,14 @@ bool *panel_ascii[] = {
   panel_off,                                                              // - 30
   panel_off,                                                              // - 31
   panel_off,                                                              // Space - 32
-  special_exclemation_mark,                                                              // ! - 33
-  special_d_quote,                                                              // " - 34
-  special_hash,                                                              // # - 35
-  special_dollar,                                                              // $ - 36
-  special_percent,                                                              // % - 37
-  special_amperson,                                                              // & - 38
-  special_quote,                                                              // ' - 39
-  special_bracket_open,                                                              // ( - 40
+  special_exclemation_mark,                                               // ! - 33
+  special_d_quote,                                                        // " - 34
+  special_hash,                                                           // # - 35
+  special_dollar,                                                         // $ - 36
+  special_percent,                                                        // % - 37
+  special_amperson,                                                       // & - 38
+  special_quote,                                                          // ' - 39
+  special_bracket_open,                                                   // ( - 40
   panel_off,                                                              // ) - 41
   panel_off,                                                              // * - 42
   panel_off,                                                              // + - 43
