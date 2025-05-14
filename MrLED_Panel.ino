@@ -67,11 +67,11 @@ void create_translation(short *panel_translator, int width, int height){
   bool revert = false;
   int ptr = 0;
   int cur_num = 0;
-  for(int pos = 0; pos < height; pos++){
+  for(int pos = 0; pos < height /*iwie abbruch wegen ptr out of bounce??*/; pos++){
     if(revert){
       int temp = cur_num;
       for(int cycle_rev = cur_num + width - 1; cycle_rev > temp; cycle_rev--){
-        cur_num = cycle_rev;
+        cur_num = cycle_rev; // das funktioniert safe nicht ! cur_num müsste das was cycle_rev am anfang war sein?
         panel_translator[ptr] = cur_num;
         ptr++;
       }
