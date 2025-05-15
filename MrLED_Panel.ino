@@ -62,28 +62,32 @@ struct PanelInfo {
   bool is_overhead;
 };
 
-void create_translation(short *panel_translator, int width, int height){
+
+short *panel_translator = NULL;
+
+void create_translation(short *panel_translator, char width, char height){
 
   bool revert = false;
   int ptr = 0;
   int cur_num = 0;
-  for(int pos = 0; pos < height /*iwie abbruch wegen ptr out of bounce??*/; pos++){
+  for(int pos = 0; pos < height; pos++){
     if(revert){
       int temp = cur_num;
-      for(int cycle_rev = cur_num + width - 1; cycle_rev > temp; cycle_rev--){
-        cur_num = cycle_rev; // das funktioniert safe nicht ! cur_num müsste das was cycle_rev am anfang war sein?
+      for(int cycle_rev = cur_num + width; cycle_rev > temp; cycle_rev--){
+        cur_num = cycle_rev;
         panel_translator[ptr] = cur_num;
         ptr++;
       }
+      cur_num = temp + width + 1;
       revert = false;
     }else{
-      for(int cycle_pos = cur_num; cycle_pos < cur_num + width; cycle_pos++){
+      int temp = cur_num;
+      for(int cycle_pos = cur_num; cycle_pos < temp + width; cycle_pos++){
         cur_num = cycle_pos;
         panel_translator[ptr] = cur_num;
         ptr++;
       }
       revert = true;
-      return ;
     }
   }
 }
@@ -337,8 +341,6 @@ void show_ascii(struct PanelInfo info, char ascii) {
 
   FastLED.show();
 }
-
-short *panel_translator = NULL;
 
 void setup() {
   FastLED.addLeds<SK6812, DATA_PIN, GRB>(leds, NUM_LEDS);
