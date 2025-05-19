@@ -2,7 +2,7 @@
 
 #include "config.h"
 
-bool panel_on[PANEL_SIZE]{
+bool panel_on[P_SIZE]{
   1, 1, 1, 1,  //1
   1, 1, 1, 1,  //2
   1, 1, 1, 1,  //3
@@ -13,7 +13,7 @@ bool panel_on[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool panel_off[PANEL_SIZE]{
+bool panel_off[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -26,7 +26,7 @@ bool panel_off[PANEL_SIZE]{
 
 //-------------SPECIAL-CHARS------------------
 
-bool special_exclemation_mark[PANEL_SIZE]{
+bool special_exclemation_mark[P_SIZE]{
   0, 1, 0, 0,  //1
   0, 1, 0, 0,  //2
   0, 1, 0, 0,  //3
@@ -37,7 +37,7 @@ bool special_exclemation_mark[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool special_d_quote[PANEL_SIZE]{
+bool special_d_quote[P_SIZE]{
   0, 1, 0, 1,  //1
   0, 1, 0, 1,  //2
   0, 0, 0, 0,  //3
@@ -48,7 +48,7 @@ bool special_d_quote[PANEL_SIZE]{
   0, 0, 0, 0,  //8
 };
 
-bool special_hash[PANEL_SIZE]{
+bool special_hash[P_SIZE]{
   0, 0, 0, 1,  //1
   1, 0, 0, 1,  //2
   1, 1, 1, 1,  //3
@@ -59,7 +59,7 @@ bool special_hash[PANEL_SIZE]{
   1, 0, 0, 0,  //8
 };
 
-bool special_dollar[PANEL_SIZE]{
+bool special_dollar[P_SIZE]{
   0, 1, 1, 0,  //1
   1, 1, 1, 1,  //2
   1, 0, 0, 0,  //3
@@ -70,7 +70,7 @@ bool special_dollar[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool special_percent[PANEL_SIZE]{
+bool special_percent[P_SIZE]{
   0, 0, 0, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 1, 1,  //3
@@ -81,7 +81,7 @@ bool special_percent[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool special_amperson[PANEL_SIZE]{
+bool special_amperson[P_SIZE]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 1, 0,  //3
@@ -92,7 +92,7 @@ bool special_amperson[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool special_quote[PANEL_SIZE]{
+bool special_quote[P_SIZE]{
   0, 0, 1, 0,  //1
   0, 0, 1, 0,  //2
   0, 0, 0, 0,  //3
@@ -103,7 +103,7 @@ bool special_quote[PANEL_SIZE]{
   0, 0, 0, 0,  //8
 };
 
-bool special_bracket_open[PANEL_SIZE]{
+bool special_bracket_open[P_SIZE]{
   0, 0, 1, 0,  //1
   0, 1, 1, 0,  //2
   1, 1, 0, 0,  //3
@@ -114,7 +114,7 @@ bool special_bracket_open[PANEL_SIZE]{
   0, 0, 1, 0,  //8
 };
 
-bool continue_here[PANEL_SIZE]{
+bool continue_here[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -128,7 +128,7 @@ bool continue_here[PANEL_SIZE]{
 
 //-------------LETTERS------------------------
 
-bool letter_A[PANEL_SIZE]{
+bool letter_A[P_SIZE]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -139,7 +139,7 @@ bool letter_A[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_B[PANEL_SIZE]{
+bool letter_B[P_SIZE]{
   1, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -150,7 +150,7 @@ bool letter_B[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool letter_C[PANEL_SIZE]{
+bool letter_C[P_SIZE]{
   0, 1, 1, 1,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -161,7 +161,7 @@ bool letter_C[PANEL_SIZE]{
   0, 1, 1, 1,  //8
 };
 
-bool letter_D[PANEL_SIZE]{
+bool letter_D[P_SIZE]{
   1, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -172,7 +172,7 @@ bool letter_D[PANEL_SIZE]{
   1, 1, 1, 0,  //8
 };
 
-bool letter_E[PANEL_SIZE]{
+bool letter_E[P_SIZE]{
   1, 1, 1, 1,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -183,7 +183,7 @@ bool letter_E[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool letter_F[PANEL_SIZE]{
+bool letter_F[P_SIZE]{
   1, 1, 1, 1,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -194,7 +194,7 @@ bool letter_F[PANEL_SIZE]{
   1, 0, 0, 0,  //8
 };
 
-bool letter_G[PANEL_SIZE]{
+bool letter_G[P_SIZE]{
   1, 1, 1, 1,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -205,7 +205,7 @@ bool letter_G[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool letter_H[PANEL_SIZE]{
+bool letter_H[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -216,7 +216,7 @@ bool letter_H[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_I[PANEL_SIZE]{
+bool letter_I[P_SIZE]{
   1, 1, 1, 0,  //1
   0, 1, 0, 0,  //2
   0, 1, 0, 0,  //3
@@ -227,7 +227,7 @@ bool letter_I[PANEL_SIZE]{
   1, 1, 1, 0,  //8
 };
 
-bool letter_J[PANEL_SIZE]{
+bool letter_J[P_SIZE]{
   1, 1, 1, 1,  //1
   0, 0, 0, 1,  //2
   0, 0, 0, 1,  //3
@@ -238,7 +238,7 @@ bool letter_J[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool letter_K[PANEL_SIZE]{
+bool letter_K[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 0, 1, 0,  //2
   1, 1, 0, 0,  //3
@@ -249,7 +249,7 @@ bool letter_K[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_L[PANEL_SIZE]{
+bool letter_L[P_SIZE]{
   1, 0, 0, 0,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -260,7 +260,7 @@ bool letter_L[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool letter_M[PANEL_SIZE]{
+bool letter_M[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 1, 1, 1,  //2
   1, 1, 1, 1,  //3
@@ -271,7 +271,7 @@ bool letter_M[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_N[PANEL_SIZE]{
+bool letter_N[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 1, 0, 1,  //2
   1, 1, 0, 1,  //3
@@ -282,7 +282,7 @@ bool letter_N[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_O[PANEL_SIZE]{
+bool letter_O[P_SIZE]{
   1, 1, 1, 1,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -293,7 +293,7 @@ bool letter_O[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool letter_P[PANEL_SIZE]{
+bool letter_P[P_SIZE]{
   1, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -304,7 +304,7 @@ bool letter_P[PANEL_SIZE]{
   1, 0, 0, 0,  //8
 };
 
-bool letter_Q[PANEL_SIZE]{
+bool letter_Q[P_SIZE]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -315,7 +315,7 @@ bool letter_Q[PANEL_SIZE]{
   0, 0, 1, 1,  //8
 };
 
-bool letter_R[PANEL_SIZE]{
+bool letter_R[P_SIZE]{
   1, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -326,7 +326,7 @@ bool letter_R[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_S[PANEL_SIZE]{
+bool letter_S[P_SIZE]{
   0, 1, 1, 1,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -337,7 +337,7 @@ bool letter_S[PANEL_SIZE]{
   1, 1, 1, 0,  //8
 };
 
-bool letter_T[PANEL_SIZE]{
+bool letter_T[P_SIZE]{
   1, 1, 1, 0,  //1
   0, 1, 0, 0,  //2
   0, 1, 0, 0,  //3
@@ -348,7 +348,7 @@ bool letter_T[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool letter_U[PANEL_SIZE]{
+bool letter_U[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -359,7 +359,7 @@ bool letter_U[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool letter_V[PANEL_SIZE]{
+bool letter_V[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -370,7 +370,7 @@ bool letter_V[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool letter_W[PANEL_SIZE]{
+bool letter_W[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -381,7 +381,7 @@ bool letter_W[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_X[PANEL_SIZE]{
+bool letter_X[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -392,7 +392,7 @@ bool letter_X[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_Y[PANEL_SIZE]{
+bool letter_Y[P_SIZE]{
   1, 0, 1, 0,  //1
   1, 0, 1, 0,  //2
   1, 0, 1, 0,  //3
@@ -403,7 +403,7 @@ bool letter_Y[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool letter_Z[PANEL_SIZE]{
+bool letter_Z[P_SIZE]{
   1, 1, 1, 1,  //1
   0, 0, 0, 1,  //2
   0, 0, 1, 0,  //3
@@ -416,7 +416,7 @@ bool letter_Z[PANEL_SIZE]{
 
 //---------------------------
 
-bool letter_a[PANEL_SIZE]{
+bool letter_a[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   1, 1, 1, 0,  //3
@@ -427,7 +427,7 @@ bool letter_a[PANEL_SIZE]{
   0, 1, 0, 1,  //8
 };
 
-bool letter_b[PANEL_SIZE]{
+bool letter_b[P_SIZE]{
   1, 0, 0, 0,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -438,7 +438,7 @@ bool letter_b[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool letter_c[PANEL_SIZE]{
+bool letter_c[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -449,7 +449,7 @@ bool letter_c[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool letter_d[PANEL_SIZE]{
+bool letter_d[P_SIZE]{
   0, 0, 0, 1,  //1
   0, 0, 0, 1,  //2
   0, 0, 0, 1,  //3
@@ -460,7 +460,7 @@ bool letter_d[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool letter_e[PANEL_SIZE]{
+bool letter_e[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -471,7 +471,7 @@ bool letter_e[PANEL_SIZE]{
   0, 1, 1, 1,  //8
 };
 
-bool letter_f[PANEL_SIZE]{
+bool letter_f[P_SIZE]{
   0, 0, 1, 0,  //1
   0, 1, 0, 1,  //2
   0, 1, 0, 0,  //3
@@ -482,7 +482,7 @@ bool letter_f[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool letter_g[PANEL_SIZE]{
+bool letter_g[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 1, 1, 1,  //3
@@ -493,7 +493,7 @@ bool letter_g[PANEL_SIZE]{
   1, 1, 1, 0,  //8
 };
 
-bool letter_h[PANEL_SIZE]{
+bool letter_h[P_SIZE]{
   1, 0, 0, 0,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -504,7 +504,7 @@ bool letter_h[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_i[PANEL_SIZE]{
+bool letter_i[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 1, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -515,7 +515,7 @@ bool letter_i[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool letter_j[PANEL_SIZE]{
+bool letter_j[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 1, 0,  //2
   0, 0, 0, 0,  //3
@@ -526,7 +526,7 @@ bool letter_j[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool letter_k[PANEL_SIZE]{
+bool letter_k[P_SIZE]{
   1, 0, 0, 0,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -537,7 +537,7 @@ bool letter_k[PANEL_SIZE]{
   1, 0, 1, 0,  //8
 };
 
-bool letter_l[PANEL_SIZE]{
+bool letter_l[P_SIZE]{
   0, 1, 0, 0,  //1
   0, 1, 0, 0,  //2
   0, 1, 0, 0,  //3
@@ -548,7 +548,7 @@ bool letter_l[PANEL_SIZE]{
   0, 0, 1, 0,  //8
 };
 
-bool letter_m[PANEL_SIZE]{
+bool letter_m[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -559,7 +559,7 @@ bool letter_m[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_n[PANEL_SIZE]{
+bool letter_n[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -570,7 +570,7 @@ bool letter_n[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_o[PANEL_SIZE]{
+bool letter_o[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -581,7 +581,7 @@ bool letter_o[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool letter_p[PANEL_SIZE]{
+bool letter_p[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 1, 1, 0,  //3
@@ -592,7 +592,7 @@ bool letter_p[PANEL_SIZE]{
   1, 0, 0, 0,  //8
 };
 
-bool letter_q[PANEL_SIZE]{
+bool letter_q[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 1, 1, 0,  //3
@@ -603,7 +603,7 @@ bool letter_q[PANEL_SIZE]{
   0, 0, 0, 1,  //8
 };
 
-bool letter_r[PANEL_SIZE]{
+bool letter_r[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -614,7 +614,7 @@ bool letter_r[PANEL_SIZE]{
   1, 0, 0, 0,  //8
 };
 
-bool letter_s[PANEL_SIZE]{
+bool letter_s[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -625,7 +625,7 @@ bool letter_s[PANEL_SIZE]{
   1, 1, 0, 0,  //8
 };
 
-bool letter_t_[PANEL_SIZE]{
+bool letter_t_[P_SIZE]{
   0, 1, 0, 0,  //1
   0, 1, 0, 0,  //2
   1, 1, 1, 0,  //3
@@ -636,7 +636,7 @@ bool letter_t_[PANEL_SIZE]{
   0, 0, 1, 0,  //8
 };
 
-bool letter_u[PANEL_SIZE]{
+bool letter_u[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -647,7 +647,7 @@ bool letter_u[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool letter_v[PANEL_SIZE]{
+bool letter_v[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -658,7 +658,7 @@ bool letter_v[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool letter_w[PANEL_SIZE]{
+bool letter_w[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -669,7 +669,7 @@ bool letter_w[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_x[PANEL_SIZE]{
+bool letter_x[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -680,7 +680,7 @@ bool letter_x[PANEL_SIZE]{
   1, 0, 0, 1,  //8
 };
 
-bool letter_y[PANEL_SIZE]{
+bool letter_y[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -691,7 +691,7 @@ bool letter_y[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool letter_z[PANEL_SIZE]{
+bool letter_z[P_SIZE]{
   0, 0, 0, 0,  //1
   0, 0, 0, 0,  //2
   0, 0, 0, 0,  //3
@@ -704,7 +704,7 @@ bool letter_z[PANEL_SIZE]{
 
 //-------------------------
 
-bool number_0[PANEL_SIZE]{
+bool number_0[P_SIZE]{
   1, 1, 1, 1,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -715,7 +715,7 @@ bool number_0[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool number_1[PANEL_SIZE]{
+bool number_1[P_SIZE]{
   0, 0, 1, 0,  //1
   0, 1, 1, 0,  //2
   1, 0, 1, 0,  //3
@@ -726,7 +726,7 @@ bool number_1[PANEL_SIZE]{
   0, 1, 1, 1,  //8
 };
 
-bool number_2[PANEL_SIZE]{
+bool number_2[P_SIZE]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -737,7 +737,7 @@ bool number_2[PANEL_SIZE]{
   1, 1, 1, 1,  //8
 };
 
-bool number_3[PANEL_SIZE]{
+bool number_3[P_SIZE]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   0, 0, 0, 1,  //3
@@ -748,7 +748,7 @@ bool number_3[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool number_4[PANEL_SIZE]{
+bool number_4[P_SIZE]{
   1, 0, 0, 1,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -759,7 +759,7 @@ bool number_4[PANEL_SIZE]{
   0, 0, 0, 1,  //8
 };
 
-bool number_5[PANEL_SIZE]{
+bool number_5[P_SIZE]{
   1, 1, 1, 1,  //1
   1, 0, 0, 0,  //2
   1, 0, 0, 0,  //3
@@ -770,7 +770,7 @@ bool number_5[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool number_6[PANEL_SIZE]{
+bool number_6[P_SIZE]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 0,  //3
@@ -781,7 +781,7 @@ bool number_6[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool number_7[PANEL_SIZE]{
+bool number_7[P_SIZE]{
   1, 1, 1, 1,  //1
   0, 0, 0, 1,  //2
   0, 0, 0, 1,  //3
@@ -792,7 +792,7 @@ bool number_7[PANEL_SIZE]{
   0, 1, 0, 0,  //8
 };
 
-bool number_8[PANEL_SIZE]{
+bool number_8[P_SIZE]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
@@ -803,7 +803,7 @@ bool number_8[PANEL_SIZE]{
   0, 1, 1, 0,  //8
 };
 
-bool number_9[PANEL_SIZE]{
+bool number_9[]{
   0, 1, 1, 0,  //1
   1, 0, 0, 1,  //2
   1, 0, 0, 1,  //3
